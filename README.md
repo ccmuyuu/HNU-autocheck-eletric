@@ -10,7 +10,7 @@
    - 在加了喵
 <br>示例:<br><img width="1600" src="imgs/图片1.png" alt="示例1"><br><img width="1600" src="imgs/图片2.png" alt="示例2">
 4. Actions添加workflows并运行(定时11点,自己在.github/workflow/config.yml按utc+0改,虽然github的时间不太准,估计会晚个1h+)<br>记得看眼输出的信息对不对，错了不背锅喵
-5. 输出样例<br><img width="1600" src="imgs/图片3.jpg" alt="输出1"><br><img width="1600" src="imgs/图片4.jpg" alt="输出2">
+5. 输出样例<br><img width="800" src="imgs/图片3.jpg" alt="输出1"><br><img width="800" src="imgs/图片4.jpg" alt="输出2">
 # To do
 各种发送方式(等一个大佬pr
 <br>别急睡了喵
