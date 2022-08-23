@@ -9,7 +9,7 @@
    - email:<br>Name填MAIL_USERNAME , Vaule为你的邮箱<br>Name填MAIL_PASSWORD , Value为你的邮箱smtp授权码<br>Name填INBOX , Value为收件邮箱地址(好像能和发件箱一致)<br>(默认qq邮箱，其他邮箱自行修改smtpmail.sh中smtp地址)
    - 在加了喵
 <br>示例:<br><img width="1600" src="imgs/图片1.png" alt="示例1"><br><img width="1600" src="imgs/图片2.png" alt="示例2">
-4. Actions添加workflows并运行(定时11点,自己在.github/workflow/config.yml按utc+0改,虽然github的时间不太准,估计会晚个1h+)<br>记得看眼输出的信息对不对，错了不背锅喵
+4. 在Actions中enable workflows并run workflow看眼输出的信息对不对，错了不背锅喵<br>(定时每日11点运行,自己在.github/workflow/config.yml按utc+0改,虽然github的时间不太准,估计会晚个1h+)
 5. 输出样例<br><img width="800" src="imgs/图片3.jpg" alt="输出1"><br><img width="800" src="imgs/图片4.jpg" alt="输出2">
 # To do
 各种发送方式(等一个大佬pr
