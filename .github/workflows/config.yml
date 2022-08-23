@@ -3,9 +3,9 @@ name: autocheck
 on:
   #手动运行
   workflow_dispatch:
-  # 定时任务，在每天的12点自动运行
+  # 定时任务，在每天的11点自动运行
   schedule:
-    - cron: '0 4 * * *'
+    - cron: '0 3 * * *'
 
 jobs:
   build:
