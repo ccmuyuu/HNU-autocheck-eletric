@@ -1,0 +1,39 @@
+name: autocheck
+
+on:
+  #手动运行
+  workflow_dispatch:
+  # 定时任务，在每天的12点自动运行
+  schedule:
+    - cron: '0 4 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+      
+      - name: get requirements
+        run: |
+          sudo apt-get install -y jq ssmtp mailutils
+          
+      - name: getdata
+        run: |
+          sudo chmod +x getdata.sh
+          ./getdata.sh
+      - name: postdata
+        env: 
+          chat_id: ${{ secrets.CHAT_ID }}
+          bot_token: ${{ secrets.BOT_TOKEN }}
+          mail_username: ${{ secrets.MAIL_USERNAME }}
+          mail_password: ${{ secrets.MAIL_PASSWORD }}
+        run: |
+          sudo chmod +x postdata.sh
+          sudo chmod +x smtpmail.sh
+          ./smtpmail.sh
+          sudo cp ssmtp.conf /etc/ssmtp/ssmtp.conf
+          sudo cp revaliases /etc/ssmtp/revaliases
+          ./postdata.sh
