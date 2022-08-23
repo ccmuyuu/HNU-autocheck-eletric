@@ -43,6 +43,7 @@ jobs:
         env:
           mail_username: ${{ secrets.MAIL_USERNAME }}
           mail_password: ${{ secrets.MAIL_PASSWORD }}
+          mail_add: ${{ secrets.INBOX }}
         run: |
           sudo chmod +x setsmtp.sh
           ./setsmtp.sh
