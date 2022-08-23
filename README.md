@@ -6,7 +6,7 @@
 2. 修改.config中信息
 3. 在Settings的Secrets的action的右上角添加参数(自行谷歌一下):
    - telegrambot:<br>Name: BOT_TOKEN 和 Value: 你的telegrambot api<br>Name: CHAT_ID 和 Value: 你的chatid
-   - email:<br>Name: MAIL_USERNAME 和 Vaule: 你的邮箱<br>Name: MAIL_PASSWORD 和 Value: 你的邮箱smtp授权码<br>(默认qq邮箱，其他邮箱自行修改smtpmail.sh中smtp地址)
+   - email:<br>Name: MAIL_USERNAME 和 Vaule: 你的邮箱<br>Name: MAIL_PASSWORD 和 Value: 你的邮箱smtp授权码<br>(默认qq邮箱，其他邮箱自行修改smtpmail.sh中smtp地址,虽然github的时间不太准)
    - 在加了喵
 4. Actions添加workflows并运行(定时11点,自己在.github/workflow/config.yml按utc+0改)<br>记得看眼输出的信息对不对，错了不背锅喵
 
