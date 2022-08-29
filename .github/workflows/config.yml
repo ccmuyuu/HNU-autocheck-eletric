@@ -58,8 +58,8 @@ jobs:
           qq_id: ${{ secrets.QQ_ID }}
           group_num: ${{ secrets.GROUP_ID }}
         run: |
-          echo 'uin:\ $qq_id' >> head.yml
-          cat head.yml body.yml > config.yml
+          echo 'uin:\ $qq_id' >> qq/head.yml
+          cat qq/head.yml qq/body.yml > qq/config.yml
           cat config.yml
           sudo chmod +x qq/go-cqhttp
           ./go-cqhttp update
