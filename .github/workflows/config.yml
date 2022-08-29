@@ -52,19 +52,3 @@ jobs:
           sudo cp revaliases /etc/ssmtp/revaliases
           sudo chmod +x mail.sh
           ./mail.sh
-      - name: postdata(qq)
-        if: ${{ env.TYPE == 3 }}
-        env:
-          qq_id: ${{ secrets.QQ_ID }}
-          group_num: ${{ secrets.GROUP_ID }}
-        run: |
-          echo 'uin:\ $qq_id' >> qq/head.yml
-          cat qq/head.yml qq/body.yml > qq/config.yml
-          cat config.yml
-          sudo chmod +x qq/go-cqhttp
-          ./go-cqhttp update
-          nohup qq/go-cqhttp > logs.txt 2>&1 &
-          cat logs.txt
-          sleep 120
-          sudo chmod +x cqhttp.sh
-          ./cqhttp.sh
