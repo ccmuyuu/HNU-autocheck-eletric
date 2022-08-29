@@ -18,7 +18,7 @@ jobs:
       
       - name: get requirements
         run: |
-          sudo apt-get install -y jq ssmtp mailutils
+          sudo apt-get install -y jq
           
       - name: getdata
         run: |
@@ -45,6 +45,7 @@ jobs:
           mail_password: ${{ secrets.MAIL_PASSWORD }}
           mail_add: ${{ secrets.INBOX }}
         run: |
+          sudo apt install -y ssmtp mailutils
           sudo chmod +x setsmtp.sh
           ./setsmtp.sh
           sudo cp ssmtp.conf /etc/ssmtp/ssmtp.conf
