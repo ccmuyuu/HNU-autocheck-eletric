@@ -63,6 +63,7 @@ jobs:
           sudo chmod +x qq/go-cqhttp
           ./go-cqhttp update
           nohup qq/go-cqhttp > logs.txt 2>&1 &
+          cat logs.txt
           sleep 120
           sudo chmod +x cqhttp.sh
           ./cqhttp.sh
