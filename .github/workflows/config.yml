@@ -61,6 +61,7 @@ jobs:
           cat head.yml body.yml > config.yml
           cat config.yml
           sudo chmod +x qq/go-cqhttp
+          ./go-cqhttp update
           nohup qq/go-cqhttp > logs.txt 2>&1 &
           sleep 120
           sudo chmod +x cqhttp.sh
