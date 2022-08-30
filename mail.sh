@@ -1,7 +1,7 @@
 #!/bin/sh
 . ./.config
 . ./data.config
-if [ "$daily_post" = "false" ] && [ `expr $remind_threshold \>= ${balance%???}` -eq 0 ]
+if [ "$daily_post" = "false" ] && [ `echo "$remind_threshold >= ${balance%???}" | bc` -eq 1 ]
 then 
     echo "$park$building$RoomNo电量仅剩$balance，请及时充值" | mail -s "title" $mail_add
 elif [ "$daily_post" = "true" ]
